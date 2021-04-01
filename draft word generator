@@ -1,0 +1,36 @@
+import timeit
+start = timeit.default_timer()
+
+
+arrey = ['qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnm']
+arrey3 = []
+
+for i in arrey[0]:
+    arrey3.append(i)
+
+arrey3.sort()
+wd = 'hello world'
+list = []
+
+
+for i in wd:
+
+    if i in arrey3:
+        arrey3.remove(i)
+        list.append(i)
+
+    elif i == " ":
+        list.append(' ')
+
+    else:
+        x = wd.index(i)
+        print('no character found: [' + i + '] in position: [' + str(x) + ']')
+
+
+print(arrey3)
+print(list)
+
+
+
+stop = timeit.default_timer()
+print('Time: ', stop - start)
